@@ -1,0 +1,11 @@
+.tech-container {
+  background-color: rgba($color: #fff, $alpha: 0.1);
+  padding: 1.2rem 1.6rem;
+
+  .tech-text {
+    font-size: 2rem;
+    height: 2.7rem;
+    display: flex;
+    align-items: center;
+  }
+}

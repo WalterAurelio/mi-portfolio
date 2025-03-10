@@ -1,0 +1,19 @@
+.navbar {
+  background-color: rgba($color: #fff, $alpha: 0.1);
+  padding: 3.2rem;
+  border-radius: 100rem;
+
+  & > a {
+    display: none;
+  }
+
+  a {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}

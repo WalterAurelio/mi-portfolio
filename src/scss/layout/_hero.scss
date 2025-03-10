@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+
+.hero-section {
+  .salute-container {
+    
+  }
+
+  .salute-text {
+    font-size: 4.88rem;
+    margin-bottom: 0.8rem;
+
+    span {
+      &:nth-child(1) {
+        opacity: 0;
+      }
+
+      color: $rojo;
+    }
+  }
+
+  .main-text {
+    font-family: 'Steelfish';
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 30.52rem;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      line-height: 0.85;
+      margin-bottom: 2.56rem;
+    }
+  }
+
+  .social-container {
+    display: none;
+  }
+}

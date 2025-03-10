@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+
+.title {
+  font-family: 'Steelfish';
+  font-size: 6.1rem;
+  line-height: 0.9;
+
+  &.invert {
+    text-align: end;
+  }
+}
