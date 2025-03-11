@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as *;
+
+.livedemo {
+  background-color: $rojo;
+  border: none;
+  border-radius: 37.333px;
+  width: 45px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 3/2;
+
+  &__icon {
+    width: 13.44px;
+    height: 16.493px;
+  }
+}

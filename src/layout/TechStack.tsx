@@ -1,11 +1,11 @@
-import SectionTitle from "../components/SectionTitle"
-import TechGroup from "../components/TechGroup"
+import TitleSection from "../components/TitleSection"
+import Technologies from "../components/Technologies"
 
 function TechStack() {
   return (
     <section className="tech-section">
-      <SectionTitle>tech stack</SectionTitle>
-      <TechGroup />
+      <TitleSection>tech stack</TitleSection>
+      <Technologies />
     </section>
   )
 }

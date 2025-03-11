@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as *;
+
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 16px;
+  background-color: rgba($color: $blanco, $alpha: 0.1);
+  // align-items: center;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &__technologies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__repo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__repo > img {
+    width: 30px;
+    height: 30px;
+  }
+}

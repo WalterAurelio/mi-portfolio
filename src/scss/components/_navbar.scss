@@ -1,19 +1,26 @@
+@use '../abstracts/variables' as *;
+
 .navbar {
   background-color: rgba($color: #fff, $alpha: 0.1);
   padding: 3.2rem;
   border-radius: 100rem;
 
-  & > a {
+  &__logo {
     display: none;
   }
+}
 
-  a {
-    color: #fff;
-    font-size: 1.6rem;
-  }
+.list {
+  display: flex;
+  justify-content: space-between;
 
-  ul {
-    display: flex;
-    justify-content: space-between;
+  &__anchor {
+    color: $blanco;
+    // leading-trim: both;
+    // text-edge: cap;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
   }
 }

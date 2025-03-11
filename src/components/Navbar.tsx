@@ -1,19 +1,19 @@
 function Navbar() {
   return (
     <nav className="navbar">
-      <a href="#">aurelio gareca</a>
-      <ul>
+      <a className="navbar__logo" href="#">aurelio gareca</a>
+      <ul className="list">
         <li>
-          <a href="#">sobre mí</a>
+          <a className="list__anchor" href="#">sobre mí</a>
         </li>
         <li>
-          <a href="#">tech stack</a>
+          <a className="list__anchor" href="#">tech stack</a>
         </li>
         <li>
-          <a href="#">proyectos</a>
+          <a className="list__anchor" href="#">proyectos</a>
         </li>
         <li>
-          <a href="#">contacto</a>
+          <a className="list__anchor" href="#">contacto</a>
         </li>
       </ul>
     </nav>
