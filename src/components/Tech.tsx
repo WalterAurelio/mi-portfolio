@@ -1,10 +1,16 @@
-import { PropsWithChildren } from "react"
+import { PropsWithChildren } from "react";
 
-function Tech({ isSmall, children }: PropsWithChildren<{ isSmall?: true }>) {
-  const smallVariant = isSmall && 'tech--small';
+type TechProps = PropsWithChildren<{
+  small?: boolean;
+}>;
+
+function Tech({ small, children }: TechProps) {
+  const isSmall = small && 'tech--sm';
   
   return (
-    <p className={`tech ${smallVariant}`}>{children}</p>
+    <p className={`tech ${isSmall}`}>
+      {children}
+    </p>
   )
 }
 export default Tech

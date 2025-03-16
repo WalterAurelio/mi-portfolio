@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as *;
+
+.sectiontitle {
+  font-family: 'Steelfish', sans-serif;
+  font-size: $h1;
+  line-height: 0.9;
+
+  &--h2 { font-size: $h2; }
+  &--h3 { font-size: $h3; }
+  &--h4 { font-size: $h4; }
+  &--h5 { font-size: $h5; }
+  &--h6 { font-size: $h6; }
+  &--p { font-size: $p; }
+}

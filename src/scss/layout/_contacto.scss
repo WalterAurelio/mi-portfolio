@@ -1,0 +1,79 @@
+@use '../abstracts/variables' as *;
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
+
+  &__datos {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 16px;
+    position: relative;
+  }
+  
+  &__arrow {
+    position: absolute;
+    left: 48%;
+    top: -66px;
+    rotate: 90deg;
+    animation: animate-arrow 1s infinite; //
+
+    &.notInView {
+      position: fixed;
+      z-index: 1;
+      top: calc(100% - 66px);
+      animation: animate-notinview 1s infinite;
+    }
+  }
+
+  &__email {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba($color: $blanco, $alpha: 0.1);
+    backdrop-filter: blur(6px);
+    width: 100%;
+
+    img {
+      height: min(100%, 26px);
+      width: min(100%, 409px);
+    }
+  }
+
+  &__redes {
+    display: flex;
+    gap: 16px;
+    padding-top: 80px;
+    width: 100%;
+  }
+}
+
+@keyframes animate-arrow {
+  0% {
+    top: -66px;
+  }
+
+  50% {
+    top: -82px;
+  }
+
+  100% {
+    top: -66px;
+  }
+}
+
+@keyframes animate-notinview {
+  0% {
+    top: calc(100% - 66px);
+  }
+
+  50% {
+    top: calc(100% - 82px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}

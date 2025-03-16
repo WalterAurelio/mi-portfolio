@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .hero {
   display: flex;
@@ -7,6 +8,10 @@
 
   &__salute {
     font-size: 48.83px;
+
+    span {
+      color: $rojo;
+    }
   }
 }
 
@@ -22,5 +27,28 @@
     font-size: 305.2px;
     line-height: 0.74;
     margin-bottom: 25.661px;
+    // transform: translateX(100vw); //
+
+    &.animate {
+      // animation: hero-span 8s infinite linear;
+    }
+  }
+}
+
+@include tablet {
+  .hero {
+    &__salute {
+      font-size: 34.156px;
+    }
+  }
+}
+
+@keyframes hero-span {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-256vw);
   }
 }

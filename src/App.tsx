@@ -1,27 +1,19 @@
-import Navbar from "./components/Navbar"
-import Hero from "./layout/Hero"
-import TemplateProject, { Project } from "./components/TemplateProject"
-import project_icon from './assets/icons/project-icon.svg'
-import ImagesProject from "./components/ImagesProject"
-
-const project: Project = {
-  icon: project_icon,
-  name: 'Nombre Proyecto',
-  images: [],
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in libero consequat, venenatis eros eget, aliquam lectus. Vivamus nec tortor nec ligula pretium viverra. Donec id sapien sed leo cursus egestas et a tellus. In hac habitasse platea dictumst.',
-  technologies: ['JavaScript', 'Sass', 'React'],
-  repoURL: '#'
-} 
+import Pointer from './components/Pointer';
+import app_icon from './assets/icons/app_icon.svg';
+import check_icon from './assets/icons/check_icon.svg';
+import SectionTitle from './components/SectionTitle';
+import Tech from './components/Tech';
 
 function App() {
   return (
     <div>
+      <Pointer icon={app_icon} />
       <br />
-      {/* <Navbar />
-      <Hero /> */}
-      <TemplateProject project={project} />
+      <SectionTitle>titulo seccion</SectionTitle>
+      <br />
+      <Tech small>HTML</Tech>
+      <br />
 
-      <ImagesProject />
     </div>
   )
 }
