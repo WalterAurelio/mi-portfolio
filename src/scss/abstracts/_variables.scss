@@ -27,6 +27,8 @@ $rojo: #dc143c;
 $negro: #171717;
 $gris: #d9d9d9;
 $blanco: #fff;
+$bg-blanco: rgba($color: $blanco, $alpha: 0.12);
+$bg-blur: blur(6px);
 
 // Media Queries
 $phone: 480px;

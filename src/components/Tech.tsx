@@ -8,9 +8,11 @@ function Tech({ small, children }: TechProps) {
   const isSmall = small && 'tech--sm';
   
   return (
-    <p className={`tech ${isSmall}`}>
-      {children}
-    </p>
+    <div className={`tech ${isSmall}`}>
+      <p className='tech__description'>
+        {children}
+      </p>
+    </div>
   )
 }
 export default Tech

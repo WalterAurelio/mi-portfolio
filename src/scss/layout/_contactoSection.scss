@@ -1,0 +1,53 @@
+@use '../abstracts/mixins' as *;
+
+.contactsection {
+  gap: 64px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  &__email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__networks {
+    display: flex;
+    gap: 16px;
+  }
+
+  @include tablet {
+    gap: 128px;
+
+    &__info {
+      width: fit-content;
+      margin: 0 auto;
+      gap: 128px;
+    }
+
+    &__email {
+      flex-direction: row;
+      margin-left: 56px;
+      position: relative;
+    }
+
+    &__networks {
+      margin-left: 56px;
+    }
+  }
+
+  @include desktop {
+    &__email {
+      margin-left: 66px;
+    }
+
+    &__networks {
+      margin-left: 66px;
+    }
+  }
+}

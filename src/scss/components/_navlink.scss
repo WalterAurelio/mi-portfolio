@@ -1,0 +1,15 @@
+@use '../abstracts/index' as *;
+
+.navlink {
+  font-size: $p;
+  width: fit-content;
+  cursor: pointer;
+  line-height: 0.36;
+  margin-top: 6px;
+
+  @include tablet {
+    font-size: $h6;
+    line-height: 0.4;
+    margin-top: 7px;
+  }
+}

@@ -1,0 +1,22 @@
+@use '../abstracts/mixins' as *;
+
+.socialnetwork {
+  display: flex;
+  gap: 8px;
+
+  &__description {
+    line-height: normal;
+    display: flex;
+    align-items: end;
+  }
+  
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include tablet {
+    &__description {
+      line-height: 100%;
+    }
+  }
+}

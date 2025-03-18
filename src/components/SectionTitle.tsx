@@ -1,15 +1,14 @@
 import { PropsWithChildren } from "react";
-import { FontSize } from "../types/fontSize";
+
+export type FontSize = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 
 type SectionTitleProps = PropsWithChildren<{
-  fontSize?: FontSize;
+  className?: string;
 }>;
 
-function SectionTitle({ fontSize, children }: SectionTitleProps) {
-  const fontSizeClass = fontSize && `sectiontitle--${fontSize}`;
-  
+function SectionTitle({ className, children }: SectionTitleProps) {
   return (
-    <h2 className={`sectiontitle ${fontSizeClass}`}>
+    <h2 className={`sectiontitle ${className}`}>
       {children}
     </h2>
   )

@@ -1,0 +1,10 @@
+@use '../abstracts/index' as *;
+
+.description {
+  font-size: $p;
+  line-height: 200%;
+
+  @include tablet {
+    font-size: $h6;
+  }
+}

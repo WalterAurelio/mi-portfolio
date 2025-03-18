@@ -1,11 +1,11 @@
+import Description from "../components/Description"
+
 function Footer() {
   return (
-    <section className="footer">
-      <a className="footer__anchor" href="#">
-        <span className="footer__name">aurelio gareca</span>
-        <span className="footer__role">frontend developer</span>
-      </a>
-    </section>
+    <footer className='footer'>
+      <Description className='footer__aurelioGareca'>aurelio gareca</Description>
+      <Description className='footer__frontendDeveloper'>frontend developer</Description>
+    </footer>
   )
 }
 export default Footer

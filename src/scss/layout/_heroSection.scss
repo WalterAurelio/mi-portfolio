@@ -1,0 +1,52 @@
+@use '../abstracts/index' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+
+  &__salute {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .holaSoy, .aurelioGareca {
+    line-height: 0.37;
+    margin-top: 12px;
+    font-size: $h4;
+  }
+
+  .aurelioGareca {
+    color: $rojo;
+
+    span {
+      color: $blanco;
+    }
+  }
+
+  &__role {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
+
+    &__salute {
+      order: 1;
+      align-items: end;
+      position: absolute;
+      right: 0;
+    }
+
+    .holaSoy, .aurelioGareca {
+      font-size: $h5;
+      text-align: right;
+    }
+  }
+}

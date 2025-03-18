@@ -1,0 +1,9 @@
+@use '../abstracts/index' as *;
+
+.bigtext {
+  font-family: 'Steelfish', sans-serif;
+  text-transform: uppercase;
+  font-size: 320px;
+  line-height: 0.744;
+  margin-bottom: 25px;
+}

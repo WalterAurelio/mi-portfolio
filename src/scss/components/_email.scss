@@ -1,0 +1,28 @@
+@use '../abstracts/mixins' as *;
+
+.email {
+  display: flex;
+  padding: 20px;
+  width: fit-content;
+  background-color: #333;
+
+  &__img {
+    width: 298px;
+  }
+
+  @include tablet {
+    padding: 24px;
+
+    &__img {
+      width: 373px;
+    }
+  }
+
+  @include desktop {
+    padding: 32px;
+
+    &__img {
+      width: 466px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use '../abstracts/mixins' as *;
+
+.sectioncomponent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include tablet {
+    gap: 64px;
+  }
+
+  &.invertAlignment {
+    align-items: flex-end;
+  }
+}

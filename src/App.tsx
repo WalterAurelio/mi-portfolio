@@ -1,19 +1,23 @@
-import Pointer from './components/Pointer';
-import app_icon from './assets/icons/app_icon.svg';
-import check_icon from './assets/icons/check_icon.svg';
-import SectionTitle from './components/SectionTitle';
-import Tech from './components/Tech';
+import Navbar from './layout/Navbar';
+import HeroSection from './layout/HeroSection';
+import SobreMiSection from './layout/SobreMiSection';
+import TechStackSection from './layout/TechStackSection';
+import ProyectosSection from './layout/ProyectosSection';
+import ContactoSection from './layout/ContactoSection';
+import Footer from './layout/Footer';
 
 function App() {
   return (
-    <div>
-      <Pointer icon={app_icon} />
-      <br />
-      <SectionTitle>titulo seccion</SectionTitle>
-      <br />
-      <Tech small>HTML</Tech>
-      <br />
-
+    <div className='body'>
+      <Navbar className='body__navbar' />
+      <div className='body__main'>
+        <HeroSection />
+        <SobreMiSection />
+        <TechStackSection />
+        <ProyectosSection />
+        <ContactoSection />
+        <Footer />
+      </div>
     </div>
   )
 }

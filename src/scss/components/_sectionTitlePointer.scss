@@ -1,0 +1,20 @@
+@use '../abstracts/mixins' as *;
+
+.sectiontitlepointer {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  width: fit-content;
+
+  @include tablet {
+    gap: 12px;
+  }
+
+  @include desktop {
+    gap: 16px;
+  }
+
+  &.invertAlignment {
+    flex-direction: row-reverse;
+  }
+}

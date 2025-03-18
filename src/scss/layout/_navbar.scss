@@ -1,0 +1,44 @@
+@use '../abstracts/index' as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 32px;
+    border-radius: 100px;
+    background-color: $bg-blanco;
+    backdrop-filter: $bg-blur;
+  }
+
+  @include tablet {
+    &__list {
+      width: 590px;
+      margin: 0 auto;
+    }
+  }
+
+  @include desktop {
+    align-items: center;
+
+    &__logo {
+      display: unset;
+    }
+
+    &__list {
+      background-color: unset;
+      padding: unset;
+      margin: unset;
+      justify-content: unset;
+      width: unset;
+      gap: 32px;
+    }
+  }
+}
