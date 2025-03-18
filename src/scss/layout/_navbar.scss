@@ -3,6 +3,8 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  transform: translateY(-99px);
+  animation: animate-navbar $at forwards;
 
   &__logo {
     display: none;
@@ -40,5 +42,11 @@
       width: unset;
       gap: 32px;
     }
+  }
+}
+
+@keyframes animate-navbar {
+  to {
+    transform: translateY(0);
   }
 }

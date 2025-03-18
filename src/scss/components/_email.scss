@@ -7,13 +7,14 @@
   background-color: #333;
 
   &__img {
-    width: 298px;
+    max-width: 298px;
   }
 
   @include tablet {
     padding: 24px;
 
     &__img {
+      max-width: unset;
       width: 373px;
     }
   }

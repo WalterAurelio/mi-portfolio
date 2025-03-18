@@ -1,7 +1,7 @@
 import Section from "../components/Section";
 import SectionTitlePointer from "../components/SectionTitlePointer";
 import arroba_icon from '../assets/icons/arroba_icon.svg';
-import email_icon from '../assets/icons/email_icon.svg';
+// import email_icon from '../assets/icons/email_icon.svg';
 import github_icon from '../assets/icons/github_icon.svg';
 import linkedin_icon from '../assets/icons/linkedin_icon.svg';
 import Email from "../components/Email";

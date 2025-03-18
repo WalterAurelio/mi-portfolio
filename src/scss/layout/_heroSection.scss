@@ -10,6 +10,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: fit-content;
+    transform: translateX(-249.1px);
+    animation: animate-salute $at forwards;
+    animation-delay: 0.4s;
   }
 
   .holaSoy, .aurelioGareca {
@@ -30,6 +34,14 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    transform: translateX(calc(100% + 20px));
+    animation: animate-role calc($at * 6) infinite linear;
+    animation-delay: $at;
+    animation-play-state: paused;
+
+    &.animate {
+      animation-play-state: running;
+    }
   }
 
   @include desktop {
@@ -42,11 +54,31 @@
       align-items: end;
       position: absolute;
       right: 0;
+      transform: translateX(calc(100% * 2));
+      animation-delay: 0.6s;
     }
 
     .holaSoy, .aurelioGareca {
       font-size: $h5;
       text-align: right;
     }
+
+    &__role {
+      transform: translateX(calc(-100% * 1.25));
+      animation: animate-salute calc($at * 1.25) forwards;
+      animation-delay: $at;
+    }
+  }
+}
+
+@keyframes animate-salute {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate-role {
+  to {
+    transform: translateX(-897.13px);
   }
 }

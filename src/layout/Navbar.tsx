@@ -14,7 +14,7 @@ const navlinkTargets = [
 
 function Navbar({ className }: NavbarProps) {
   return (
-    <nav className={`navbar ${className}`}>
+    <nav id='navbar' className={`navbar ${className}`}>
       <Navlink className='navbar__logo'>aurelio gareca</Navlink>
 
       <ul className='navbar__list'>
