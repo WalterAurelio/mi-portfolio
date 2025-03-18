@@ -1,4 +1,4 @@
-import email_img from '../assets/imgs/original/email_img.png';
+import email_img from '../assets/imgs/webp/email_img.webp';
 
 function Email() {
   return (
