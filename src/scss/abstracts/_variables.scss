@@ -38,3 +38,30 @@ $desktop: 1024px;
 // Animation Timing
 
 $at: 1s;
+$ad: 0.5s;
+
+// Keyframes
+
+@keyframes centerX-from-right {
+  from {
+    transform: translateX(calc(100% + 20px));
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes centerX-from-left {
+  from {
+    transform: translateX(calc(-100% - 20px));
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

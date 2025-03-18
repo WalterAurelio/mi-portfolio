@@ -11,18 +11,18 @@
     flex-direction: column;
     gap: 16px;
     width: fit-content;
-    transform: translateX(-249.1px);
+    transform: translateX(calc(-100% - 20px));
     animation: animate-salute $at forwards;
-    animation-delay: 0.4s;
+    animation-delay: $ad;
   }
 
-  .holaSoy, .aurelioGareca {
+  &__holaSoy, &__aurelioGareca {
     line-height: 0.37;
     margin-top: 12px;
     font-size: $h4;
   }
 
-  .aurelioGareca {
+  &__aurelioGareca {
     color: $rojo;
 
     span {
@@ -35,8 +35,8 @@
     flex-direction: column;
     gap: 32px;
     transform: translateX(calc(100% + 20px));
-    animation: animate-role calc($at * 6) infinite linear;
-    animation-delay: $at;
+    animation: animate-role calc($at * 8) infinite linear;
+    animation-delay: calc($ad * 2);
     animation-play-state: paused;
 
     &.animate {
@@ -55,18 +55,17 @@
       position: absolute;
       right: 0;
       transform: translateX(calc(100% * 2));
-      animation-delay: 0.6s;
     }
 
-    .holaSoy, .aurelioGareca {
+    &__holaSoy, &__aurelioGareca {
       font-size: $h5;
       text-align: right;
     }
 
     &__role {
       transform: translateX(calc(-100% * 1.25));
-      animation: animate-salute calc($at * 1.25) forwards;
-      animation-delay: $at;
+      animation: animate-salute calc($at * 2) forwards;
+      animation-delay: calc($ad * 2);
     }
   }
 }
@@ -79,6 +78,6 @@
 
 @keyframes animate-role {
   to {
-    transform: translateX(-897.13px);
+    transform: translateX(calc(-897.13px));
   }
 }

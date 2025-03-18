@@ -7,10 +7,14 @@ import linkedin_icon from '../assets/icons/linkedin_icon.svg';
 import Email from "../components/Email";
 import SocialNetwork from "../components/SocialNetwork";
 import CopyButton from "../components/CopyButton";
+import { useInView } from "react-intersection-observer";
 
 function ContactoSection() {
+  const { inView, ref } = useInView({ triggerOnce: true, threshold: 0.4 });
+  const animateClass = inView && 'animate';
+
   return (
-    <Section id='contacto' className='contactsection'>
+    <Section ref={ref} id='contacto' className={`center-from-left ${animateClass}`}>
       <SectionTitlePointer icon={arroba_icon}>contacto</SectionTitlePointer>
       <div className='contactsection__info'>
 

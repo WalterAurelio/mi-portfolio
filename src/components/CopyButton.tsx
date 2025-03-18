@@ -14,7 +14,7 @@ function CopyButton({ className }: CopyButtonProps) {
     setIsClicked(true);
     const email = 'aurelio.gareca.94@hotmail.com';
     navigator.clipboard.writeText(email);
-    setTimeout(() => setIsClicked(false), 3000);
+    setTimeout(() => setIsClicked(false), 2400);
   };
 
   return (

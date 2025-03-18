@@ -2,6 +2,7 @@ import Section from "../components/Section";
 import SectionTitlePointer from "../components/SectionTitlePointer";
 import app_icon from '../assets/icons/app_icon.svg';
 import ProjectTemplate, { Project } from "../components/ProjectTemplate";
+import { useInView } from "react-intersection-observer";
 
 const myProject: Project = {
   name: 'título proyecto',
@@ -13,8 +14,11 @@ const myProject: Project = {
 };
 
 function ProyectosSection() {
+  const { inView, ref } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const animateClass = inView && 'animate';
+
   return (
-    <Section id='proyectos' invertAlignment>
+    <Section ref={ref} id='proyectos' className={`center-from-right ${animateClass}`} invertAlignment>
       <SectionTitlePointer icon={app_icon} invertAlignment>proyectos</SectionTitlePointer>
       <div className='projectsarray'>
         {
