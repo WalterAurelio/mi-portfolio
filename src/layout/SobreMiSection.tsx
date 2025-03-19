@@ -3,10 +3,29 @@ import perfil_icon from '../assets/icons/perfil_icon.svg';
 import Description from "../components/Description";
 import Section from "../components/Section";
 import { useInView } from "react-intersection-observer";
+import { useActiveSectionStore } from "../store/activeSectionStore";
+import { useShallow } from "zustand/shallow";
+import { useState } from "react";
 
 function SobreMiSection() {
-  const { inView, ref } = useInView({ triggerOnce: true, threshold: 0.4 });
-  const animateClass = inView && 'animate';
+  const [count, setCount] = useState(0);
+  // const setActiveSection = useActiveSectionStore(useShallow(state => state.setActiveSection));
+  const { activeSection, setActiveSection } = useActiveSectionStore(useShallow(state => ({
+    activeSection: state.activeSection,
+    setActiveSection: state.setActiveSection
+  })));
+  const { ref } = useInView({
+    threshold: 0.4,
+    onChange(inView) {
+      if (inView) {
+        setCount(prev => prev + 1);
+        setActiveSection('sobremi');
+      } else if (activeSection === 'sobremi') {
+        setActiveSection(undefined);
+      }
+    }
+  });
+  const animateClass = count >= 1 && 'animate';
 
   return (
     <Section ref={ref} id='sobre-mi' className={`center-from-right ${animateClass}`} invertAlignment>

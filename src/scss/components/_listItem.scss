@@ -1,0 +1,31 @@
+@use '../abstracts/index' as *;
+
+.listitem {
+  padding: 0 12px; //
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all calc($at / 4) linear;
+
+  &.active {
+    background-color: $bg-blanco; //
+  }
+
+  @include tablet {
+    padding: 0 16px;
+  }
+
+  @include desktop {
+    background-color: unset;
+    backdrop-filter: unset;
+    padding: unset;
+    border-radius: unset;
+    display: unset;
+
+    &.active {
+      background-color: unset;
+      backdrop-filter: unset;
+    }
+  }
+}

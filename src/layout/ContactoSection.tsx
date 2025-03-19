@@ -8,10 +8,23 @@ import Email from "../components/Email";
 import SocialNetwork from "../components/SocialNetwork";
 import CopyButton from "../components/CopyButton";
 import { useInView } from "react-intersection-observer";
+import { useShallow } from "zustand/shallow";
+import { useActiveSectionStore } from "../store/activeSectionStore";
+import { useState } from "react";
 
 function ContactoSection() {
-  const { inView, ref } = useInView({ triggerOnce: true, threshold: 0.4 });
-  const animateClass = inView && 'animate';
+  const [count, setCount] = useState(0);
+  const setActiveSection = useActiveSectionStore(useShallow(state => state.setActiveSection));
+  const { ref } = useInView({
+    threshold: 0.4,
+    onChange(inView) {
+      if (inView) {
+        setCount(prev => prev + 1);
+        setActiveSection('contacto');
+      }
+    }
+  });
+  const animateClass = count >= 1 && 'animate';
 
   return (
     <Section ref={ref} id='contacto' className={`center-from-left ${animateClass}`}>

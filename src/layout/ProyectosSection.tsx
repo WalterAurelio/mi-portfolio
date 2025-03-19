@@ -3,6 +3,9 @@ import SectionTitlePointer from "../components/SectionTitlePointer";
 import app_icon from '../assets/icons/app_icon.svg';
 import ProjectTemplate, { Project } from "../components/ProjectTemplate";
 import { useInView } from "react-intersection-observer";
+import { useShallow } from "zustand/shallow";
+import { useActiveSectionStore } from "../store/activeSectionStore";
+import { useState } from "react";
 
 const myProject: Project = {
   name: 'título proyecto',
@@ -14,8 +17,18 @@ const myProject: Project = {
 };
 
 function ProyectosSection() {
-  const { inView, ref } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const animateClass = inView && 'animate';
+  const [count, setCount] = useState(0);
+  const setActiveSection = useActiveSectionStore(useShallow(state => state.setActiveSection));
+  const { ref } = useInView({
+    threshold: 0.2,
+    onChange(inView) {
+      if (inView) {
+        setCount(prev => prev + 1);
+        setActiveSection('proyectos');
+      }
+    }
+  });
+  const animateClass = count >= 1 && 'animate';
 
   return (
     <Section ref={ref} id='proyectos' className={`center-from-right ${animateClass}`} invertAlignment>
