@@ -22,11 +22,16 @@
     display: flex;
     flex-direction: column;
     gap: 160px;
+    margin-top: 165px;
   }
 
   @include tablet {
     padding: 20px 20px 0;
-    gap: 82px
+    gap: 82px;
+    
+    &__main {
+      margin-top: 161px;
+    }
   }
 
   @include desktop {

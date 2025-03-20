@@ -9,7 +9,7 @@ type GoToTopButtonProps = {
 
 function GoToTopButton({ className, ref }: GoToTopButtonProps) {
   return (
-    <ScrollIntoView selector='#navbar' scrollOptions={{ block: 'center' }} className={className} >
+    <ScrollIntoView selector='#topbody' scrollOptions={{ block: 'start' }} className={className} >
       <button ref={ref} type='button' className='gototop'>
         <Icon icon={chevron_icon} />
       </button>

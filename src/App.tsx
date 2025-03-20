@@ -8,7 +8,7 @@ import Footer from './layout/Footer';
 
 function App() {
   return (
-    <div className='body'>
+    <div id='topbody' className='body'>
       <Navbar className='body__navbar' />
       <div className='body__main'>
         <HeroSection />
