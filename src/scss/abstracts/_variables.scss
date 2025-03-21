@@ -21,6 +21,8 @@ $h4: 31.25px;
 $h5: 25px;
 $h6: 20px;
 $p: 16px;
+$s: 12.8px;
+$xs: 10.24px;
 
 // Colors
 $rojo: #dc143c;
@@ -32,9 +34,11 @@ $bg-blanco: rgba($color: $blanco, $alpha: 0.12);
 $bg-blur: blur(6px);
 
 // Media Queries
-$phone: 480px;
+$fold: 320px;
+$phone: 420px;
 $tablet: 768px;
 $desktop: 1024px;
+$full: 1280px;
 
 // Animation Timing
 

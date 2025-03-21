@@ -14,32 +14,30 @@
   padding: 16px 16px 0;
   display: flex;
   flex-direction: column;
-  // gap: 89px;
-  // backdrop-filter: blur(40px);
-  // animation: bg-blur $at forwards linear;
 
   &__main {
     display: flex;
     flex-direction: column;
-    gap: 160px;
-    margin-top: 165px;
+    gap: 128px;
+    margin-top: calc(48.09px + 32px);
   }
 
   @include tablet {
     padding: 20px 20px 0;
-    gap: 82px;
-    
+
     &__main {
-      margin-top: 161px;
+      margin-top: calc(66.39px + 32px);
     }
   }
 
   @include desktop {
-    padding: 40px 0 0;
-    
+    padding: 40px 40px 0;
+
     &__main {
-      max-width: 1062px;
       margin: 0 auto;
+      margin-top: calc(12px + 80px);
+      max-width: 996px;
+      width: 100%;
     }
   }
 }

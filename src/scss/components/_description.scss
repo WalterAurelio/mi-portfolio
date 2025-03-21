@@ -4,7 +4,7 @@
   font-size: $p;
   line-height: 200%;
 
-  @include tablet {
+  @include desktop {
     font-size: $h6;
   }
 }

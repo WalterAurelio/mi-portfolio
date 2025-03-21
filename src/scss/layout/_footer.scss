@@ -4,8 +4,8 @@
   border-top: solid 1px $blanco;
   background-color: $negro;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  // flex-wrap: wrap;
+  justify-content: space-between;
   gap: 16px;
   padding: 32px 0;
   position: relative;
@@ -19,17 +19,16 @@
     &.animate {
       animation: animate-arrow calc($at / 2) infinite alternate ease-in;
     }
-
   }
 
   &__aurelioGareca,
   &__frontendDeveloper {
     line-height: 0.44;
     margin-top: 4.6px;
-  }
 
-  &__aurelioGareca {
-    margin-left: 33.06px;
+    @include desktop {
+      font-size: $h6;
+    }
   }
 
   &__frontendDeveloper {

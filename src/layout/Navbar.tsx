@@ -17,7 +17,7 @@ const navlinkTargets = [
 function Navbar({ className }: NavbarProps) {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [currentScrollPos, setCurrentScrollPos] = useState(window.pageYOffset);
-  const hidenClass = prevScrollPos >= currentScrollPos ? '' : 'hidden';
+  const hiddenClass = prevScrollPos >= currentScrollPos ? '' : 'hidden';
 
   const hideNavbar = () => {
     setCurrentScrollPos(window.pageYOffset);
@@ -33,7 +33,7 @@ function Navbar({ className }: NavbarProps) {
   });
 
   return (
-    <nav id='navbar' className={`navbar ${hidenClass} ${className}`}>
+    <nav id='navbar' className={`navbar ${hiddenClass} ${className}`}>
       <Navlink className='navbar__logo'>aurelio gareca</Navlink>
 
       <ul className='navbar__list'>

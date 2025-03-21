@@ -1,7 +1,7 @@
 @use '../abstracts/index' as *;
 
 .listitem {
-  padding: 0 12px; //
+  padding: 12px 8px; //
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@
   }
 
   @include tablet {
-    padding: 0 16px;
+    padding: 20px 12px;
   }
 
   @include desktop {

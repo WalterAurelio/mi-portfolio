@@ -3,17 +3,17 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  transform: translateY(-99px);
+  transform: translateY(-86.4px);
   animation: animate-navbar $at forwards;
   
-  z-index: 1; //
+  z-index: 1;
   position: fixed;
   width: calc(100% - 32px);
   top: 16px;
   transition: all calc($at / 4);
   
   &.hidden {
-    top: -76px;
+    top: -86.4px;
   }
   
   &__logo {
@@ -24,33 +24,26 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 32px;
+    padding: 8px;
     border-radius: 100px;
     background-color: $bg-blanco;
     backdrop-filter: $bg-blur;
-    height: 76px; //
-    padding: 12px;
   }
 
   @include tablet {
     top: 20px;
 
     &__list {
-      width: 590px;
+      width: 541px;
       margin: 0 auto;
-      height: 80px;
-    }
-
-    &.hidden {
-      top: -80px;
     }
   }
 
   @include desktop {
     align-items: center;
-    max-width: 1062px;
-    margin: 0 auto;
+    max-width: 996px;
     width: 100%;
+    margin: 0 auto;
     position: unset;
 
     &__logo {
@@ -64,9 +57,9 @@
       margin: unset;
       justify-content: unset;
       width: unset;
-      gap: 32px;
       height: unset;
       padding: unset;
+      gap: 32px;
     }
   }
 }

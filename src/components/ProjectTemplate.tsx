@@ -19,7 +19,7 @@ type ProjectTemplateProps = {
 }
 
 function ProjectTemplate({ project }: ProjectTemplateProps) {
-  const { name, image, description, technologies, demoURL, repoURL } = project;
+  const { name, description, technologies, demoURL, repoURL } = project;
 
   return (
     <article className='projecttemplate'>

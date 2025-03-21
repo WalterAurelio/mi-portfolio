@@ -9,7 +9,7 @@
   &__salute {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     width: fit-content;
     transform: translateX(calc(-100% - 20px));
     animation: animate-salute $at forwards;
@@ -17,17 +17,17 @@
   }
 
   &__holaSoy, &__aurelioGareca {
-    line-height: 0.37;
-    margin-top: 12px;
-    font-size: $h4;
+    line-height: 0.4;
+    margin-top: 9px;
+    font-size: $h5;
   }
 
   &__aurelioGareca {
     color: $rojo;
+  }
 
-    span {
-      color: $blanco;
-    }
+  &__aurelioGareca > span {
+    color: $blanco;
   }
 
   &__role {
@@ -45,27 +45,36 @@
   }
 
   @include desktop {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: unset;
+    min-width: 944px;
 
     &__salute {
-      order: 1;
-      align-items: end;
+      transform: translateX(calc(-100% - 40px));
+    }
+
+    &__role {
+      transform: translateX(calc(100% + 40px));
+      animation: animate-salute $at forwards;
+      animation-delay: calc($ad * 2);
+    }
+  }
+
+  @include full {
+    max-width: 996px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__salute {
       position: absolute;
       right: 0;
       transform: translateX(calc(100% * 2));
     }
 
     &__holaSoy, &__aurelioGareca {
-      font-size: $h5;
       text-align: right;
     }
 
     &__role {
       transform: translateX(calc(-100% * 1.25));
-      animation: animate-salute calc($at * 2) forwards;
-      animation-delay: calc($ad * 2);
     }
   }
 }

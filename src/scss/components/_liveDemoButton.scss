@@ -1,9 +1,9 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/index' as *;
 
 .livedemobutton {
   background-color: $rojo;
-  width: 48px;
-  height: 32px;
+  width: 39px;
+  height: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,17 @@
   cursor: pointer;
   
   &__icon {
-    width: 9.846px;
-    height: 16px;
+    width: 8px;
+    height: 13px;
+  }
+
+  @include desktop {
+    width: 48px;
+    height: 32px;
+
+    &__icon {
+      width: 9.846px;
+      height: 16px;
+    } 
   }
 }

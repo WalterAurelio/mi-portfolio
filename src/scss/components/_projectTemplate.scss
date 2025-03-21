@@ -13,13 +13,8 @@
     align-items: center;
     justify-content: space-between;
 
-
     .title {
-      @include tablet {
-        font-size: $h3;
-        line-height: 0.8;
-        margin-bottom: 2px;
-      }
+      font-size: $h4;
 
       @include desktop {
         font-size: $h3;
@@ -51,6 +46,7 @@
 
   &__repo {
     line-height: 0%;
+    margin-left: 16px;
   }
 
   @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {

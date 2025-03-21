@@ -1,15 +1,20 @@
 @use '../abstracts/index' as *;
 
 .navlink {
-  font-size: $p;
-  width: fit-content;
+  font-size: $xs;
   cursor: pointer;
-  line-height: 0.36;
-  margin-top: 6px;
+  line-height: 0.4;
+  margin-top: 4px;
+
+  @include phone {
+    font-size: $s;
+  }
 
   @include tablet {
+    font-size: $p;
+  }
+
+  @include desktop {
     font-size: $h6;
-    line-height: 0.4;
-    margin-top: 7px;
   }
 }
