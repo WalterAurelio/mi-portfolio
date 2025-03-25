@@ -5,20 +5,10 @@
   padding: 16px;
   background-color: $bg-blanco;
   backdrop-filter: $bg-blur;
-  border-radius: 10.24px;
+  border-radius: 8px;
 
   &__description {
-    font-size: $h6;
-    line-height: 0.44;
-    margin-top: 7px;
-  }
-
-  &--sm {
-    border-radius: 8.192px;
-
-    .tech__description {
-      font-size: $p;
-      margin-top: 4.6px;
-    }
+    line-height: 0.4;
+    margin-top: 6px;
   }
 }

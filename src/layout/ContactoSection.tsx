@@ -27,10 +27,9 @@ function ContactoSection() {
   const animateClass = count >= 1 && 'animate';
 
   return (
-    <Section ref={ref} id='contacto' className={`center-from-left ${animateClass}`}>
+    <Section ref={ref} id='contacto' className={`contactsection center-from-left ${animateClass}`}>
       <SectionTitlePointer icon={arroba_icon}>contacto</SectionTitlePointer>
       <div className='contactsection__info'>
-
         <div className='contactsection__email'>
           <Email />
           <CopyButton />
@@ -39,7 +38,6 @@ function ContactoSection() {
           <SocialNetwork icon={github_icon} socialNetworkURL='https://github.com/WalterAurelio'>GitHub</SocialNetwork>
           <SocialNetwork icon={linkedin_icon} socialNetworkURL='https://www.linkedin.com/in/aurelio-gareca/'>LinkedIn</SocialNetwork>
         </div>
-        
       </div>
     </Section>
   )

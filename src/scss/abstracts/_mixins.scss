@@ -18,8 +18,8 @@
   }
 }
 
-@mixin full {
-  @media (min-width: $full) {
+@mixin fulldesktop {
+  @media (min-width: $fulldesktop) {
     @content;
   }
 }

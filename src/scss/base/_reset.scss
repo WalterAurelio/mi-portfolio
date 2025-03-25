@@ -12,7 +12,10 @@ html {
 body {
   font-size: 16px;
   font-family: 'Cocomat', sans-serif;
-  background-color: $negro;
+  // background-color: $negro;
+  background-image: url('../assets/imgs/original/bg_tablet.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1, h2, h3, p, a {

@@ -1,20 +1,29 @@
 @use '../abstracts/index' as *;
 
 .navlink {
-  font-size: $xs;
-  cursor: pointer;
+  width: fit-content;
+  padding: 20px 12px 16px;
   line-height: 0.4;
-  margin-top: 4px;
+  // margin-top: 6px;
+  border-radius: 100px;
+  transition: all calc($at / 4);
+  cursor: pointer;
 
-  @include phone {
-    font-size: $s;
+  &.active {
+    background-color: $bg-blanco;
   }
 
-  @include tablet {
-    font-size: $p;
+  @media (max-width: 419px) {
+    font-size: $ssmall;
   }
 
   @include desktop {
-    font-size: $h6;
+    padding: 0;
+    margin-top: 4px;
+
+    &.active {
+      background-color: unset;
+      text-decoration: underline;
+    }
   }
 }

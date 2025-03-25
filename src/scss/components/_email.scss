@@ -2,17 +2,18 @@
 
 .email {
   display: flex;
+  align-items: center;
   padding: 24px;
-  width: fit-content;
   background-color: #333;
+  max-width: 354px;
+  max-height: 60px;
   border-radius: 4px;
-  max-width: 288px;
 
-  @include tablet {
-    max-width: 346px;
+  &__img {
+    height: 100%;
   }
 
   @include desktop {
-    max-width: 421px;
+    max-width: 470px;
   }
 }

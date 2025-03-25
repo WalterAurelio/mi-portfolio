@@ -1,9 +1,9 @@
 import Description from "./Description";
 import Icon from "./Icon";
 import LiveDemoButton from "./LiveDemoButton";
-import SectionTitle from "./SectionTitle";
 import github_icon from '../assets/icons/github_icon.svg';
 import Technologies from "./Technologies";
+import SectionSubtitle from "./SectionSubtitle";
 
 export type Project = {
   name: string;
@@ -23,8 +23,9 @@ function ProjectTemplate({ project }: ProjectTemplateProps) {
 
   return (
     <article className='projecttemplate'>
+
       <div className='projecttemplate__title'>
-        <SectionTitle className='title'>{name}</SectionTitle>
+        <SectionSubtitle>{name}</SectionSubtitle>
         <LiveDemoButton demoURL={demoURL} />
       </div>
 
@@ -34,11 +35,12 @@ function ProjectTemplate({ project }: ProjectTemplateProps) {
       <Description className='projecttemplate__description'>{description}</Description>
 
       <div className='projecttemplate__technologies'>
-        <Technologies techs={technologies} small />
+        <Technologies techs={technologies} />
         <a className='projecttemplate__repo' href={repoURL} target='_blank'>
           <Icon icon={github_icon} />
         </a>
       </div>
+
     </article>
   )
 }

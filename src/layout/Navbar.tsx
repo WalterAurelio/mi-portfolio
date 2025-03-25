@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ListItem from "../components/ListItem";
 import Navlink from "../components/Navlink";
 import ScrollIntoView from "react-scroll-into-view";
 
@@ -39,11 +38,11 @@ function Navbar({ className }: NavbarProps) {
       <ul className='navbar__list'>
         {
           navlinkTargets.map((navlink, index) =>
-            <ListItem key={index} navlink={navlink}>
+            <li key={index}>
               <ScrollIntoView selector={navlink.targetId}  scrollOptions={ navlink.className !== 'proyectos' && navlink.className !== 'contacto' ? { block: 'center' } : {}}>
                 <Navlink>{navlink.description}</Navlink>
               </ScrollIntoView>
-            </ListItem>
+            </li>
           )
         }
       </ul>

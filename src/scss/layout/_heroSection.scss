@@ -5,11 +5,13 @@
   flex-direction: column;
   gap: 16px;
   position: relative;
+  width: 100%;
+  // height: 100vh;
 
   &__salute {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     width: fit-content;
     transform: translateX(calc(-100% - 20px));
     animation: animate-salute $at forwards;
@@ -19,7 +21,7 @@
   &__holaSoy, &__aurelioGareca {
     line-height: 0.4;
     margin-top: 9px;
-    font-size: $h5;
+    font-size: $h4small;
   }
 
   &__aurelioGareca {
@@ -33,7 +35,7 @@
   &__role {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
     transform: translateX(calc(100% + 20px));
     animation: animate-role calc($at * 8) infinite linear;
     animation-delay: calc($ad * 2);
@@ -44,9 +46,13 @@
     }
   }
 
-  @include desktop {
-    min-width: 944px;
+  @include tablet {
+    &__role {
+      gap: 24px;
+    }
+  }
 
+  @include desktop {
     &__salute {
       transform: translateX(calc(-100% - 40px));
     }
@@ -58,19 +64,15 @@
     }
   }
 
-  @include full {
-    max-width: 996px;
-    width: 100%;
+  @include fulldesktop {
+    flex-direction: row;
     margin: 0 auto;
 
     &__salute {
       position: absolute;
       right: 0;
-      transform: translateX(calc(100% * 2));
-    }
-
-    &__holaSoy, &__aurelioGareca {
       text-align: right;
+      transform: translateX(calc(100% * 2));
     }
 
     &__role {

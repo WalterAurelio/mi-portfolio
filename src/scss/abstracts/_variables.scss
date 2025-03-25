@@ -22,7 +22,15 @@ $h5: 25px;
 $h6: 20px;
 $p: 16px;
 $s: 12.8px;
-$xs: 10.24px;
+
+$h1small: 48.83px;
+$h2small: 39.06px;
+$h3small: 31.25px;
+$h4small: 25px;
+$h5small: 20px;
+$h6small: 16px;
+$psmall: 14px;
+$ssmall: 12.8px;
 
 // Colors
 $rojo: #dc143c;
@@ -38,15 +46,13 @@ $fold: 320px;
 $phone: 420px;
 $tablet: 768px;
 $desktop: 1024px;
-$full: 1280px;
+$fulldesktop: 1280px;
 
 // Animation Timing
-
 $at: 1s;
 $ad: 0.5s;
 
 // Keyframes
-
 @keyframes centerX-from-right {
   from {
     transform: translateX(calc(100% + 20px));

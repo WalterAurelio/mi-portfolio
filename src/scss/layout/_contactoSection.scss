@@ -1,12 +1,12 @@
 @use '../abstracts/mixins' as *;
 
 .contactsection {
-  gap: 64px;
+  gap: 72px;
 
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 72px;
   }
 
   &__email {
@@ -20,30 +20,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    max-width: 354px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   @include tablet {
-    gap: 128px;
-
     &__info {
-      width: fit-content;
       margin: 0 auto;
-      gap: 128px;
     }
 
     &__email {
       flex-direction: row;
-      margin-left: 56px;
-      position: relative;
-    }
-
-    &__networks {
-      margin-left: 56px;
-    }
-  }
-
-  @include desktop {
-    &__email {
       margin-left: 66px;
     }
 

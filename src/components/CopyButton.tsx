@@ -20,8 +20,10 @@ function CopyButton({ className }: CopyButtonProps) {
   return (
     <button disabled={isClicked} onClick={handleClick} className={`copybutton ${isClickedClass} ${className}`}>
       <img className='copybutton__icon copybutton__icon--copy' src={copiar_icon} alt='copy-icon' />
-      <img className='copybutton__icon copybutton__icon--check' src={check_icon} alt='check-icon' />
-      <p className='copybutton__text'>Copiado</p>
+      <div className='containercopiado'>
+        <img className='copybutton__icon copybutton__icon--check' src={check_icon} alt='check-icon' />
+        <p className='copybutton__text'>Copiado</p>
+      </div>
     </button>
   )
 }

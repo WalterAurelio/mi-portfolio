@@ -5,12 +5,11 @@ import Section from "../components/Section";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionStore } from "../store/activeSectionStore";
 import { useShallow } from "zustand/shallow";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const techsArr = ['HTML', 'CSS', 'JavaScript', 'Sass', 'React', 'TypeScript', 'Tailwind CSS'];
+const techsArr = ['HTML', 'CSS', 'JavaScript', 'Sass', 'React', 'TypeScript', 'Tailwind CSS', 'Figma', 'Zustand'];
 
 function TechStackSection() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [count, setCount] = useState(0);
   const setActiveSection = useActiveSectionStore(useShallow(state => state.setActiveSection));
   const { ref } = useInView({
@@ -18,28 +17,16 @@ function TechStackSection() {
     onChange(inView) {
       if (inView) {
         setCount(prev => prev + 1);
-        setActiveSection('techstack');
+        setActiveSection('tech stack');
       }
     }
   });
   const animateClass = count >= 1 && 'animate';
 
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      setWindowWidth(window.innerWidth);
-    });
-
-    return () => {
-      window.removeEventListener('resize', () => {
-        setWindowWidth(window.innerWidth);
-      });
-    }
-  }, []);
-
   return (
     <Section ref={ref} id='tech-stack' className={`center-from-left ${animateClass}`}>
       <SectionTitlePointer icon={codigo_icon}>tech stack</SectionTitlePointer>
-      <Technologies techs={techsArr} small={windowWidth < 768} />
+      <Technologies techs={techsArr} />
     </Section>
   )
 }

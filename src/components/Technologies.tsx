@@ -2,15 +2,14 @@ import Tech from "./Tech";
 
 type TechnologiesProps = {
   techs: string[];
-  small?: boolean;
 };
 
-function Technologies({ techs, small }: TechnologiesProps) {
+function Technologies({ techs }: TechnologiesProps) {
   return (
     <div className='technologies'>
       {
         techs.map((tech, index) =>
-          <Tech key={index} small={small}>{tech}</Tech>
+          <Tech key={index}>{tech}</Tech>
         )
       }
     </div>

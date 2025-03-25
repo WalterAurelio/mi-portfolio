@@ -1,13 +1,13 @@
 @use '../abstracts/index' as *;
 
-.sectiontitle {
+.sectionsubtitle {
   font-family: 'Steelfish', sans-serif;
-  font-size: $h2small;
+  font-size: $h3small;
   line-height: 0.8;
   margin-bottom: 2px;
   width: fit-content;
 
   @include desktop {
-    font-size: $h2;
+    font-size: $h3;
   }
 }

@@ -6,9 +6,10 @@
   display: flex;
   // flex-wrap: wrap;
   justify-content: space-between;
+  padding: 20px 10px;
   gap: 16px;
-  padding: 32px 0;
   position: relative;
+  margin-top: 144px;
 
   &__totop {
     position: absolute;
@@ -23,16 +24,31 @@
 
   &__aurelioGareca,
   &__frontendDeveloper {
-    line-height: 0.44;
-    margin-top: 4.6px;
-
-    @include desktop {
-      font-size: $h6;
-    }
+    line-height: 0.4;
+    margin-top: 6px;
   }
 
   &__frontendDeveloper {
     color: $rojo;
+  }
+
+  @include phone {
+    padding: 20px 16px;
+  }
+
+  @include tablet {
+    padding: 20px;
+  }
+
+  @include desktop {
+    // width: 100vw;
+    // margin-left: -32px;
+    padding: 20px 32px;
+  }
+
+  @include fulldesktop {
+    // margin-left: calc((1049px - 100vw) / 2);
+    padding: 20px calc((100vw - 1049px) / 2);
   }
 }
 

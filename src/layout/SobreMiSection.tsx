@@ -9,7 +9,6 @@ import { useState } from "react";
 
 function SobreMiSection() {
   const [count, setCount] = useState(0);
-  // const setActiveSection = useActiveSectionStore(useShallow(state => state.setActiveSection));
   const { activeSection, setActiveSection } = useActiveSectionStore(useShallow(state => ({
     activeSection: state.activeSection,
     setActiveSection: state.setActiveSection
@@ -19,8 +18,8 @@ function SobreMiSection() {
     onChange(inView) {
       if (inView) {
         setCount(prev => prev + 1);
-        setActiveSection('sobremi');
-      } else if (activeSection === 'sobremi') {
+        setActiveSection('sobre mí');
+      } else if (activeSection === 'sobre mí') {
         setActiveSection(undefined);
       }
     }

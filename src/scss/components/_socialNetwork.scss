@@ -2,21 +2,15 @@
 
 .socialnetwork {
   display: flex;
+  align-items: center;
   gap: 8px;
 
   &__description {
-    line-height: normal;
-    display: flex;
-    align-items: end;
+    line-height: 0.4;
+    margin-top: 6px;
   }
   
   &:hover {
     text-decoration: underline;
-  }
-
-  @include tablet {
-    &__description {
-      line-height: 100%;
-    }
   }
 }

@@ -1,17 +1,12 @@
 import { PropsWithChildren } from "react";
+import Description from "./Description";
 
-type TechProps = PropsWithChildren<{
-  small?: boolean;
-}>;
-
-function Tech({ small, children }: TechProps) {
-  const isSmall = small && 'tech--sm';
-  
+function Tech({ children }: PropsWithChildren) {
   return (
-    <div className={`tech ${isSmall}`}>
-      <p className='tech__description'>
+    <div className='tech'>
+      <Description className='tech__description'>
         {children}
-      </p>
+      </Description>
     </div>
   )
 }
