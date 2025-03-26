@@ -7,7 +7,7 @@ import { useActiveSectionStore } from "../store/activeSectionStore";
 import { useShallow } from "zustand/shallow";
 import { useState } from "react";
 
-const techsArr = ['HTML', 'CSS', 'JavaScript', 'Sass', 'React', 'TypeScript', 'Tailwind CSS', 'Figma', 'Zustand'];
+const techsArr = ['HTML', 'CSS', 'JavaScript', 'Figma', 'Sass', 'React', 'Zustand', 'TypeScript', 'Tailwind CSS'];
 
 function TechStackSection() {
   const [count, setCount] = useState(0);

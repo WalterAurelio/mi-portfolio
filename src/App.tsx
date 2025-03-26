@@ -8,9 +8,9 @@ import Footer from './layout/Footer';
 
 function App() {
   return (
-    <>
-      <div id='topbody' className='body'>
-        <Navbar className='body__navbar' />
+    <div id='topbody' className='body'>
+      <Navbar className='body__navbar' />
+      <div className='body__content'>
         <div className='body__main'>
           <HeroSection />
           <SobreMiSection />
@@ -18,9 +18,9 @@ function App() {
           <ProyectosSection />
           <ContactoSection />
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </>
+    </div>
   )
 }
 export default App

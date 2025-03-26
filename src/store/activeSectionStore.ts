@@ -6,7 +6,7 @@ type ActiveSectionStore = {
 };
 
 export const useActiveSectionStore = create<ActiveSectionStore>((set) => ({
-  activeSection: undefined,
+  activeSection: 'contacto',
   setActiveSection: (value) => {
     set({ activeSection: value })
   }

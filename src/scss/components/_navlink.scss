@@ -2,19 +2,27 @@
 
 .navlink {
   width: fit-content;
-  padding: 20px 12px 16px;
-  line-height: 0.4;
+  padding: 18px 12px 16px;
+  line-height: 0.3;
   // margin-top: 6px;
   border-radius: 100px;
   transition: all calc($at / 4);
   cursor: pointer;
 
   &.active {
-    background-color: $bg-blanco;
+    // background-color: $bg-blanco;
+    text-decoration: underline;
   }
 
   @media (max-width: 419px) {
     font-size: $ssmall;
+  }
+
+  @include phone {
+    &.active {
+      background-color: $bg-blanco;
+      text-decoration: none;
+    }
   }
 
   @include desktop {
@@ -22,7 +30,7 @@
     margin-top: 4px;
 
     &.active {
-      background-color: unset;
+      background-color: $negro;
       text-decoration: underline;
     }
   }

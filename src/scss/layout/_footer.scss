@@ -1,15 +1,12 @@
 @use '../abstracts/index' as *;
 
 .footer {
-  border-top: solid 1px $blanco;
+  border-top: solid 1px $bg-blanco;
   background-color: $negro;
   display: flex;
-  // flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px 10px;
-  gap: 16px;
+  padding: 40px 10px;
   position: relative;
-  margin-top: 144px;
 
   &__totop {
     position: absolute;
@@ -25,7 +22,7 @@
   &__aurelioGareca,
   &__frontendDeveloper {
     line-height: 0.4;
-    margin-top: 6px;
+    margin-top: 5px;
   }
 
   &__frontendDeveloper {
@@ -33,22 +30,19 @@
   }
 
   @include phone {
-    padding: 20px 16px;
+    padding: 40px 16px;
   }
 
   @include tablet {
-    padding: 20px;
+    padding: 40px 20px;
   }
-
+  
   @include desktop {
-    // width: 100vw;
-    // margin-left: -32px;
-    padding: 20px 32px;
+    padding: 40px 32px;
   }
 
   @include fulldesktop {
-    // margin-left: calc((1049px - 100vw) / 2);
-    padding: 20px calc((100vw - 1049px) / 2);
+    padding: 40px calc((100vw - 1049px) / 2);
   }
 }
 
